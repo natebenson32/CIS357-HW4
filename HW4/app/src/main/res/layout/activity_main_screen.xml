@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.test.hw4.MainScreen">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <EditText
+        android:id="@+id/LatP1"
+        android:layout_width="170dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:hint="@string/enter_latp1"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="false"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginStart="14dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:id="@+id/LonP1"
+        android:layout_width="170dp"
+        android:layout_height="41dp"
+        android:layout_alignBaseline="@+id/LatP1"
+        android:layout_alignBottom="@+id/LatP1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="13dp"
+        android:ems="10"
+        android:hint="@string/enter_lonp1"
+        android:inputType="numberDecimal|numberSigned"
+        android:selectAllOnFocus="false"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/LonP2"
+        android:layout_width="170dp"
+        android:layout_height="41dp"
+        android:layout_alignStart="@+id/LonP1"
+        android:layout_below="@+id/LonP1"
+        android:ems="10"
+        android:hint="@string/enter_lonp2"
+        android:inputType="numberDecimal|numberSigned"
+        android:selectAllOnFocus="false"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/LatP2"
+        android:layout_width="170dp"
+        android:layout_height="41dp"
+        android:layout_alignStart="@+id/LatP1"
+        android:layout_below="@+id/LatP1"
+        android:ems="10"
+        android:hint="@string/enter_latp2"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="false"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/CalculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/LatP2"
+        android:layout_below="@+id/LonP2"
+        android:layout_marginTop="12dp"
+        android:text="@string/calc_button" />
+
+    <Button
+        android:id="@+id/ClearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/CalculateButton"
+        android:layout_alignBottom="@+id/CalculateButton"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/CalculateButton"
+        android:text="@string/clear_button" />
+
+    <TextView
+        android:id="@+id/DistanceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/CalculateButton"
+        android:layout_below="@+id/CalculateButton"
+        android:layout_marginTop="14dp"
+        android:text="Distance: "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/BearingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/DistanceLabel"
+        android:layout_below="@+id/DistanceLabel"
+        android:layout_marginTop="11dp"
+        android:text="Bearing: "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
